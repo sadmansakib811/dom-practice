@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple-Delete-Confirmation-btn</title>
+</head>
+<body>
+    <h1 id="secret-info">My Secret Info</h1>
+    <input id="delete-confirm" type="text" placeholder="please type 'delete' to delete My Secret Info text">
+    <button id="btn-delete" disabled>Delete</button>
+    <script>
+        const inputText = document.getElementById('delete-confirm').addEventListener('keyup',function(event){
+            const userInput = event.target.value;
+            const deleteButton = document.getElementById('btn-delete');
+            if (userInput ==='delete'){
+                deleteButton.removeAttribute('disabled');
+               
+                
+
+            }
+            else {
+                deleteButton.setAttributes('disabled',true);
+            }
+        });
+
+        document.getElementById('btn-delete').addEventListener('click', function(){
+            document.getElementById('secret-info').style.display='none';
+        })
+
+
+
+//         const btnEvent = document.getElementById('btn-delete').addEventListener('click',function(){
+
+// })
+    </script>
+</body>
+</html>
